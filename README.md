@@ -1,16 +1,8 @@
-# Robótica Computacional 2022 1.o semestre
+# Robótica Computacional 2022 2.o semestre
 
 Material de exercícios e guias para a disciplina de Robótica Computacional do 3o. Eng. Comp
 
 [Aula 1 - Imagens e modelos de cores](./aula01)
-
-[Aula 2 - Formação das imagens e segmentação por cores](./aula02)
-
-[Aula 3 - Transformada de Hough e Redes Neurais](./aula03)
-
-[Aula 4 - Introdução a ROS](./aula04)
-
-[Aula 5 - Reolução de questões](./aula05)
 
 ## Revisão para provas
 
@@ -21,14 +13,15 @@ Material de exercícios e guias para a disciplina de Robótica Computacional do 
 
 ## Projetos antigos
 
-Projeto de 2022.1
-[Exemplo](https://www.youtube.com/watch?v=d973oGe-djQ) (vamos organizar a playlist)
+### Projeto de 2022.1 ###
+
+[Exemplo]( https://www.youtube.com/watch?v=XdvTlUDYGuk) (vamos organizar a playlist)
 
 [Projeto de 2021.1](https://youtube.com/playlist?list=PLVU3UhXa4-X-qIlNL6NVvIizOXXJkkkU1) 
 
 Projeto de 2020.2: [Alguns](https://youtu.be/IkhYoPVj5N0) [projetos](https://youtu.be/TQPLV2kHsoU). Vamos organizar a playlist 
 
-Projeto de 2020.1
+### Projeto de 2020.1 ###
 [Exemplo](https://www.youtube.com/watch?v=53aITsVMrow&t=11s) e [Playlist - vai ser aumentada](https://www.youtube.com/playlist?list=PLh9Ibk8NqrdHtjPx56ALZNvH6T2X7PlAe)
 
 [Projeto de 2019](https://www.youtube.com/playlist?list=PLh9Ibk8NqrdGZ9czNnsYgYyeFMmOcCkYa)
