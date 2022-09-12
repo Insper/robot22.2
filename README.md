@@ -3,6 +3,10 @@
 Material de exercícios e guias para a disciplina de Robótica Computacional do 3o. Eng. Comp
 
 [Aula 1 - Imagens e modelos de cores](./aula01)
+[Aula 2 - Segmentação e contornos](./aula02)
+[Aula 3 - Retas, círculos e reconhecimento de objetos](./aula03)
+[Aula 4 - Introdução ao ROS](./aula05)
+
 
 ## Revisão para provas
 
@@ -21,7 +25,7 @@ Material de exercícios e guias para a disciplina de Robótica Computacional do 
 
 Projeto de 2020.2: [Alguns](https://youtu.be/IkhYoPVj5N0) [projetos](https://youtu.be/TQPLV2kHsoU). Vamos organizar a playlist 
 
-### Projeto de 2020.1 ###
+### Projetos de 2020.1 e anteriores ###
 [Exemplo](https://www.youtube.com/watch?v=53aITsVMrow&t=11s) e [Playlist - vai ser aumentada](https://www.youtube.com/playlist?list=PLh9Ibk8NqrdHtjPx56ALZNvH6T2X7PlAe)
 
 [Projeto de 2019](https://www.youtube.com/playlist?list=PLh9Ibk8NqrdGZ9czNnsYgYyeFMmOcCkYa)
