@@ -5,12 +5,10 @@ Lembre-se de que também existem [as provas e simulados anteriores](./lista_prov
 
 # 1. Revisão para a P1
 
-[Código do simulado da prova](https://github.com/insper-classroom/221_robot_sim1)
-
-[Gabarito do simulado](https://github.com/insper-classroom/221_robot_sim1/tree/gabarito)
+[Código do simulado da prova](https://github.com/insper-classroom/222_robot_sim1)
 
 
-# 2. Revisão de ROS feita para a P1 do semestre passado
+# 2. Gravação da revisão de ROS feita para a P1 de 2021 (primeiro semestre) 
 
 [Código do simulado da prova](https://github.com/insper-classroom/211_robot_sim)
 
@@ -64,7 +62,6 @@ Faça um programa em ROS que realize as seguintes tarefas:
 
 
 ## 4.2 Resposta da Q3 
-
 
 
 Código de gabarito:
@@ -183,10 +180,9 @@ if __name__=="__main__":
 
 
 
-
 # Questão 4 - ROS + cv
 
-**Atenćão: você vai usar OpenCV mas não vai trabalhar com imagens de câmera**
+**Atenção: você vai usar OpenCV mas não vai trabalhar com imagens de câmera**
 
 Você deve trabalhar no arquivo `le_scan_grafico.py`
 

@@ -5,7 +5,7 @@ Material de exercícios e guias para a disciplina de Robótica Computacional do 
 [Aula 1 - Imagens e modelos de cores](./aula01)
 [Aula 2 - Segmentação e contornos](./aula02)
 [Aula 3 - Retas, círculos e reconhecimento de objetos](./aula03)
-[Aula 4 - Introdução ao ROS](./aula05)
+[Aula 4 - Introdução ao ROS](./aula04)
 
 
 ## Revisão para provas
