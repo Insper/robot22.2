@@ -51,7 +51,7 @@ if __name__=="__main__":
     rospy.init_node("processa_imagem")
 
     # topico_imagem = "/kamera"
-    topico_imagem = "/bebop/image_raw/compressed" # Use para robo virtual
+    topico_imagem = "/camera/image/compressed" # Use para robo virtual
     
     recebedor = rospy.Subscriber(topico_imagem, CompressedImage, roda_todo_frame, queue_size=4, buff_size = 2**24)
     print("Usando ", topico_imagem)
