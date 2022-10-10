@@ -11,7 +11,7 @@ O cenário do projeto é a pista do laboratório 404, incluindo os elementos apr
 
 O mesmo cenário está disponível no simulador, através do comando:
 
-    roslaunch my_simulation projeto_2022.launch
+    roslaunch my_simulation trevo.launch
 
 Para habilitar o controle da garra executar:
 
@@ -36,11 +36,11 @@ https://classroom.github.com/a/kJ8RlsZQ
 
 
 Veja que não há código de template, e portanto seu grupo deverá criar o projeto ROS. Para criar a pasta do projeto, siga as instruções em:
-https://github.com/Insper/robot22.2/blob/main/guides/projeto_rospython.md
+https://github.com/Insper/robot22.2/blob/master/guides/projeto_rospython.md
 
 
 Em especial atenção ao nome da pasta do repositório do projeto, como está especificado em:
-https://github.com/Insper/robot22.2/blob/main/guides/projeto_rospython.md#usando-o-github-classroom
+https://github.com/Insper/robot22.2/blob/master/guides/projeto_rospython.md#usando-o-github-classroom
 
 
 ## Rubricas
