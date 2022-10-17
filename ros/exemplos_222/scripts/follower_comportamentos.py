@@ -18,13 +18,8 @@ import time
 from sensor_msgs.msg import Image, CompressedImage, LaserScan
 from geometry_msgs.msg import Twist
 from cv_bridge import CvBridge, CvBridgeError
-
-SEGUE_LINHA = 0
-SLALOM = 1
-
-TOKEN_LINHA = 0
-TOKEN_CUBO = 1
-TOKEN_CHEGOU = 2
+from tf import transformations
+from nav_msgs.msg import Odometry
 
 class Follower:
 
@@ -47,25 +42,43 @@ class Follower:
         self.laser_subscriber = rospy.Subscriber('/scan',
                                                   LaserScan, 
 	 		                                    self.laser_callback)
+
+        self.odom_subscriber = rospy.Subscriber('/odom',
+                                                  Odometry, 
+	 		                                    self.odom_callback)
         
         self.twist = Twist()
         self.laser_msg = LaserScan()
         
+        # Variaveis de controle
         self.cx = -1
         self.cy = -1
         self.h = -1
         self.w = -1
+        self.angulo = 0
 
-        self.estado = SEGUE_LINHA
+        # Variaveis de estado
+        self.ve_linha = False
+        self.obstaculo = False
+        self.goal = None
 
-#     #     self.lastError = 0
-#     #     self.max_vel_linear = 0.2
-#     #     self.max_vel_angular = 2.0
         self.hertz = 250
         self.rate = rospy.Rate(self.hertz)
 
+
+    def odom_callback(self, msg):
+        quat = msg.pose.pose.orientation
+        lista = [quat.x, quat.y, quat.z, quat.w]
+        angulos = np.degrees(transformations.euler_from_quaternion(lista))
+        self.angulo = angulos[2] # Eixo Z
+
+        
     def laser_callback(self, msg):
-         self.laser_msg = msg
+        self.laser_msg = msg
+        if msg.ranges[0] < 0.2:
+            self.obstaculo = True
+        else:
+            self.obstaculo = False
 
 #     # def get_laser(self, pos):
 #     #     return self.laser_msg.ranges[pos]
@@ -93,9 +106,12 @@ class Follower:
             M = cv2.moments(mask)
 
             if M['m00'] > 0:
+                self.ve_linha = True
                 self.cx = int(M['m10']/M['m00'])
                 self.cy = int(M['m01']/M['m00'])
                 cv2.circle(cv_image, (self.cx, self.cy), 20, (0,0,255), -1)
+            else:
+                self.ve_linha = False
 
             cv2.imshow("window", cv_image)
             cv2.waitKey(1)
@@ -110,18 +126,38 @@ class Follower:
         self.twist.linear.x = 0.2
         self.twist.angular.z = -float(err) / 100
 
-        return TOKEN_LINHA
-   
-        
-    def control(self):
-        
-        if self.estado == SEGUE_LINHA:
-            token = self.segue_linha()
+    def procura_linha(self):
+        self.twist.linear.x = 0.0
+        self.twist.angular.z = 0.1
 
-            if token == TOKEN_LINHA:
-                self.estado = SEGUE_LINHA
-            elif token == TOKEN_CUBO:
-                self.estado = SLALOM
+    def gira_90(self):
+        if self.goal is None:
+            self.goal = self.angulo + math.radians(90)
+            if self.goal > math.radians(180):
+                self.goal -= math.radians(360)
+
+        # Decidir quando parar de girar
+        # Quando parar de girar self.goal = None
+               
+        self.twist.linear.x = 0.0
+        self.twist.angular.z = 0.1
+   
+    def control(self):
+        print(f"Obstaculo: {self.obstaculo}")
+        print(f"Goal: {self.goal}")
+        
+
+        # Arbitrador do comportamento
+        
+        # Plano A 
+        if self.obstaculo or self.goal is not None:
+            self.gira_90()
+
+        elif self.ve_linha:
+            self.segue_linha()
+
+        else:
+            self.procura_linha()
 
         #... Completar o codigo do arbitrador
 

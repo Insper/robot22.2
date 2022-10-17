@@ -28,7 +28,7 @@ class Follower:
 	    #topico da camera do robo real
 	    #self.image_sub = rospy.Subscriber('/v4l/camera/image_raw/compressed',
         #topico da camera do robo simulado
-        self.image_sub = rospy.Subscriber('/camera/image/compressed',
+        self.image_sub = rospy.Subscriber('/camera/color/image_raw/compressed',
                                             CompressedImage, 
                                             self.image_callback, 
                                             queue_size=4, 
