@@ -23,9 +23,9 @@ marker_size  = 20 #- [cm]
 
 
 #--- Get the camera calibration path
-calib_path  = "/home/borg/catkin_ws/src/robot22.1/projeto/aruco/"
-camera_matrix   = np.loadtxt(calib_path+'cameraMatrix_raspi.txt', delimiter=',')
-camera_distortion   = np.loadtxt(calib_path+'cameraDistortion_raspi.txt', delimiter=',')
+calib_path  = "/home/borg/catkin_ws/src/robot22.2/projeto/aruco/"
+camera_matrix   = np.loadtxt(calib_path+'cameraMatrix_realsense.txt', delimiter=',')
+camera_distortion   = np.loadtxt(calib_path+'cameraDistortion_realsense.txt', delimiter=',')
 
 #--- Define the aruco dictionary
 aruco_dict  = aruco.getPredefinedDictionary(aruco.DICT_6X6_250)
