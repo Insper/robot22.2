@@ -8,7 +8,15 @@
 #  A Practical Introduction to the Robot Operating System
 #  Example 12-5. follower_p.py pag265
 #  
-#  Referendia PD:https://github.com/martinohanlon/RobotPID/blob/master/mock/mock_robot_pd.py 
+#  Referendia PD:https://github.com/martinohanlon/RobotPID/blob/master/mock/mock_robot_pd.py
+# 
+# Para executar:
+#
+#       rosrun exemplos222 follower_comportamentos_linha.py
+# 
+# Em outro terminal:
+#
+#       rosrun exemplos222 follower_comportamentos_controller.py       
 
 from traitlets import Bool
 import rospy
@@ -77,7 +85,7 @@ class Follower:
 
     def laser_callback(self, msg):
         self.laser_msg = msg
-        if msg.ranges[0] < 0.2:
+        if msg.ranges[0] < 0.3:
             self.obstaculo = True
         else:
             self.obstaculo = False
@@ -87,16 +95,30 @@ class Follower:
         self.twist.angular.z = 0.1
 
     def gira_90(self):
-        if self.goal is None:
-            self.goal = self.angulo + math.radians(90)
-            if self.goal > math.radians(180):
-                self.goal -= math.radians(360)
 
-        # Decidir quando parar de girar
-        # Quando parar de girar self.goal = None
-               
+        # Comportamento de giar sentido anti-horário
         self.twist.linear.x = 0.0
         self.twist.angular.z = 0.1
+
+        if self.goal is None:
+            # Define o ângulo de objetivo
+            self.goal = self.angulo + 90
+            if self.goal > 180:
+                self.goal -= 360
+        else:
+            # Decide quando para de girar
+            diferenca = self.goal - self.angulo
+            if diferenca > 180:
+                diferenca -= 360
+            elif diferenca < -180:
+                diferenca += 360
+            
+            if abs(diferenca) < math.radians(5): # Tolerância de 5 graus
+                self.goal = None
+                # Manda o robô para frente
+                self.twist.linear.x = 0.1
+                self.twist.angular.z = 0.0
+                
    
     def control(self):
         print(f"Obstaculo: {self.obstaculo}")
@@ -104,14 +126,14 @@ class Follower:
     
         # Arbitrador do comportamento
         
-        # Plano A 
+        # Plano A - Girar tem prioridade 
         if self.obstaculo or self.goal is not None:
             self.gira_90()
 
         # Plano B
         elif self.ve_linha:
             #self.segue_linha()
-            self.twist = self.vel_linha
+            self.twist = self.vel_linha #usa comportamento implementado em outro arquivo
 
         else:
             self.procura_linha()
