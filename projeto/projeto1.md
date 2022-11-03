@@ -1,7 +1,7 @@
 
 # Projeto 1
 
-Deadline: 04/11/2022
+Deadline: 11/11/2022
 
 ## Cenário
 
@@ -176,11 +176,10 @@ Como atividade inicial, sugiro que tente fazer o robô *seguir a pista* . Você 
 
 # Exemplo do ARUCO 
 
-Exemplo de como interpretar os markers ARUCO 
-[./aruco/aruco.ipynb] (./aruco/aruco.ipynb)
+Exemplo de como interpretar os markers ARUCO [./aruco/aruco.ipynb](./aruco/aruco.ipynb)
 
 Exemplo de como programar usando os markers ARUCO em 3D 
-[https://github.com/Insper/robot22.2/blob/master/projeto/aruco/aruco.py](https://github.com/Insper/robot22.2/blob/master/projeto/aruco/aruco.py)
+[https://github.com/Insper/robot22.2/blob/master/projeto/aruco/aruco_caminfo.py](https://github.com/Insper/robot22.2/blob/master/projeto/aruco/aruco_caminfo.py)
 
 # Instruções sobre os tópicos da garra 
 
