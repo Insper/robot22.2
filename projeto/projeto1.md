@@ -1,7 +1,7 @@
 
 # Projeto 1
 
-Deadline: 11/11/2022
+Deadline: 18/11/2022
 
 ## Cenário
 
@@ -135,15 +135,17 @@ Cores válidas do creeper: `blue`, `green`, `pink`.
 
 Estações válidas: `cat`, `car`, `horse` e `bird`
 
-Os objetivos abaixo são exemplos de objetivos possíveis,  eque devem ser filmados para fins de demonstração.  O seu robô deve ser capaz de realizar *qualquer* objetivo. 
+Os objetivos abaixo são exemplos de objetivos possíveis, e que devem ser filmados para fins de demonstração.  O seu robô deve ser capaz de realizar *qualquer* objetivo. 
+
+O primeiro objetivo deve ser gravado junto com a volta do robo na pista, sem cortes. Os demais objetivos podem ser filmados sem o robo precisar dar outra volta na pista.
 
 
 ```python
-goal1 = ("blue", 22, "bird")
+goal1 = ("blue", 11, "bird")
 
-goal2 = ("green", 13, "car")
+goal2 = ("green", 11, "car")
 
-goal3 = ("pink", 11, "horse")
+goal3 = ("red", 21, "horse")
 ```
 
 
