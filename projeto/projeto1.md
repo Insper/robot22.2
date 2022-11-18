@@ -1,7 +1,22 @@
 
 # Projeto 1
 
-Deadline: 18/11/2022
+**Deadline:** 18/11/2022
+
+**Delta:** 16/12/2022
+
+## Atenção
+
+**Não haverá** mais projeto 2.
+
+**Aguardem** o enunciado do projeto delta.
+
+As rubricas do projeto foram alteradas:
+- Basta dar a volta e fazer o slalom para tirar C (independente da quantidade de integrantes do grupo)
+- As rubricas tiveram seus conceitos aumentados
+- Todos os grupos terão direito ao projeto Delta caso não atinjam o conceito C.
+
+Para maiores informações, leiam atentamente a rubrica de cada conceito.
 
 ## Cenário
 
@@ -45,38 +60,36 @@ https://github.com/Insper/robot22.2/blob/master/guides/projeto_rospython.md#usan
 
 ## Rubricas
 
-**Conceito D - Mínimo para ter direito à Delta**
+**Conceito C - Todos os grupos**
 
 O robô percorre as duas alças da pista, parando onde começou, usando
-a odometria para saber de onde saiu e fazendo o slalom. É preciso gravar todo o circuito,  que deve ser percorrido em mendos de 15 min.
+a odometria para saber de onde saiu e fazendo o slalom. É preciso gravar todo o circuito,  que deve ser percorrido em mendos de 15 min. O video de demonstração deve correr ininterruptamente.
 
+**Conceito B - 3 integrantes**
+**Conceito C+ - 4 integrantes**
 
-**Conceito C**
+Robô é capaz de percorrer toda a pista, fazendo o *slalom*, parando onde começou. Durante a volta ou depois de dar volta, deve procurar e se chocar contra um creeper da cor certa e ID corretos, voltando depois à pista. A cor e o ID do creeper deve ser escolhida como um parâmetro do programa, ou seja, deve funcionar para qualquer cor e ID pedidos (desde a dupla seja válida).
 
-Robô é capaz de percorrer toda a pista, fazendo o *slalom*, parando onde começou.
-É preciso realizar uma dentre duas tarefas:
- 
-1. Depois de dar volta, deve procurar e se chocar contra um creeper da cor certa e ID corretos, voltando depois à pista. A cor e o ID do creeper deve ser escolhida como um parâmetro do programa, ou seja, deve funcionar para qualquer cor e ID pedidos (desde a dupla seja válida).
+É preciso gravar todo o circuito, que deve ser percorrido em menos de 20 min. O video deve demonstrar um dos [goals](#objetivos-da-missão) junto com a volta na pista. Os demais [goals](#objetivos-da-missão) podem ser filmados só no momento de derrubar o creeper.
 
-É preciso gravar todo o circuito, que deve ser percorrido em menos de 20 min.
-
-Para atingir este conceito, também é necessário demonstrar o trabalho em equipe, com commits equilibrados de todos os integrantes. Isso vale para todos os conceitos superiores também. 
-
-
-**Conceito C+**
+**Conceito B+ - 3 integrantes**
+**Conceito B - 4 integrantes**
 
 Robô é capaz de percorer toda a pista, fazendo o slalom, parando onde começou. Depois, deve procurar e "encostar" em um creeper da cor certa e ID corretos, voltando depois à pista. A cor e o ID do creeper deve ser escolhida como um parâmetro do programa, ou seja, deve funcionar para qualquer cor e ID pedidos (desde a dupla seja válida). É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min.
 
 Encostar no creeper significa, especificamente: chegar bem perto do creeper com a garra abaixada, e então parar o robô e levantar a garra e encostar nele ou derrubá-lo.
 
-É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min. Também é preciso comprovar o trabalho em equipe. 
+É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min. O video deve demonstrar um dos [goals](#objetivos-da-missão) junto com a volta na pista. Os demais [goals](#objetivos-da-missão) podem ser filmados só no momento de derrubar o creeper.
+
+Para atingir este conceito, também é necessário demonstrar o trabalho em equipe, com commits equilibrados de todos os integrantes. Isso vale para todos os conceitos superiores também. 
 
 
-**Conceito B** 
+**Conceito A - 3 integrantes** 
+**Conceito B+ - 4 integrantes**
 
 O robô deve percorrer toda a pista, parando onde começou, e no meio do caminho pega o creeper da cor e ID corretos com a garra e volta para a pista. 
 
-A cor e o ID devem ser parâmetros do programa, ou seja, ele deve funcionar para qualquer valor de cor e ID. 
+A cor e o ID devem ser parâmetros do programa, ou seja, ele deve funcionar para qualquer valor de cor e ID.  
 
 O código tem que estar bem modularizado em comportamentos, e cada função/método deve estar documentada explicando de forma resumida o que faz, como no exemplo abaixo:
 
@@ -89,15 +102,18 @@ def soma(a,b):
   	return a + b
 ```
 
-É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min.
+É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min.O video deve demonstrar um dos [goals](#objetivos-da-missão) junto com a volta na pista. Os demais [goals](#objetivos-da-missão) podem ser filmados só no momento de derrubar o creeper.
 
-**Conceito B+** 
 
-Além dos itens do conceito B, o robô deve deixar o creeper na na base certa e completar mais uma volta na pista.
+**Conceito A+ - 3 integrantes** 
+**Conceito A - 4 integrantes** 
+
+Além dos itens do conceito A, o robô deve deixar o creeper na na base certa e completar mais uma volta na pista.
 A base também deve ser fornecida como parâmetro do projeto. 
 
+É preciso gravar todo o circuito, que deve ser percorrido em mendos de 20 min.O video deve demonstrar um dos [goals](#objetivos-da-missão) junto com a volta na pista. Os demais [goals](#objetivos-da-missão) podem ser filmados só no momento de derrubar o creeper.
 
-**Conceito A**
+**Conceito A+ - 4 integrantes**
 
 Itens do conceito B+ mais o uso de classes e objetos Python    
 
@@ -109,14 +125,6 @@ Fazer um dentre os quatro *especiais*:
 * Mapear os Arucos da pista e dos creepers usando o modo 3D e odometria.
 * Estruturar o programa com pelo menos um node ROS prestando serviço para o outro.
 
-**Conceito A+**
-
-Itens do conceito A e fazer 3 especiais em vez de apenas um.
-
-**Conceito A+ para grupos de 4**
-
-Itens do conceito A e fazer todos os 4 especiais
-
 ### Grupos de 4 pessoas 
 
 Os grupos de 4 pessoas terão sempre um conceito deslocado em relacão aos de 3 pessoas.
@@ -125,9 +133,7 @@ Para obter A+ num grupo de 4, é necessário  fazer os 4 especiais.
 
 Assim, o necessário para conceito B em grupos de 3 representa o conceito C+ em grupos de 4.
 
-
 # Objetivos da missão 
-
 
 ### Exemplos de objetivos da missão (devem ser filmados): 
 
