@@ -92,11 +92,15 @@ Tentar ver se o simulador do robô funciona:
 
 É comum que na primeira vez que se executa o simulador haja demora para este abrir porque os modelos 3D estão sendo baixados. Seu computador precisa ter acesso à internet para funcionar.
 
-O script `simulador_turtle.sh` já contém estes comandos, para conveniência. 
+### Método alternativo para iniciar o simulador
 
-De permissão para executar com os comandos a seguir;
+O script `simulador_turtle.sh` já contém estes comandos, para conveniência.
+Lembre-se de que pode rodar uma instância do simulador a cada vez!
+Assim, sempre que for iniciar outro mundo no simulador, deve encerrar a execução atual.  
 
-    cd ~/catkin_ws/src/robot21.1/guides
+De permissão para executar com os comandos a seguir:
+
+    cd ~/catkin_ws/src/robot22.2/guides
     chmod +x simulador_turtle.sh
     ./simulador_turtle.sh
 
