@@ -9,7 +9,17 @@
 
 **Não haverá** mais projeto 2.
 
-**Aguardem** o enunciado do projeto delta.
+**Projeto Delta - a missão**
+
+O robô deverá percorrer as duas alças do trevo, fazendo um tour de recohecimento do terreno e mapeando as posições das bases, ou seja, das caixas contendo as imagens reconhecíveis através da MobileNet, usando as informações de odometria e do lidar e/ou da Intel Realsense. Então deverá ir até a reserva de creepers e derrubar um creeper com ID e cor específicas, voltar à pista e, quando encontrar a base, parar em frente.
+
+Não é mais necessário realizar o slalom.
+
+O projeto deve ser realizado na pista física da sala de aula, de forma que
+o simulador é uma ferramenta para testar a implementação.
+
+
+**Rubricas do Projeto Regular** 
 
 As rubricas do projeto foram alteradas:
 - Basta dar a volta e fazer o slalom para tirar C (independente da quantidade de integrantes do grupo)
